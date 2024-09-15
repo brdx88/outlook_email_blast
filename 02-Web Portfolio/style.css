@@ -1,130 +1,48 @@
-/* General Styles */
+/* Apply Montserrat font */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, p, ul, li, a {
     color: #fff;
-    margin: 0;
-    padding: 0;
-}
-
-a {
-    text-decoration: none;
-    color: #1abc9c;
-}
-
-h1, h2, h3 {
-    margin: 0.5em 0;
-    color: #fff;
-}
-
-p {
-    line-height: 1.6;
-}
-
-/* Header Styles */
-header {
-    background-color: #1e1e1e;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav ul li {
-    display: inline;
-}
-
-header a {
-    color: #1abc9c;
-    font-weight: bold;
 }
 
 /* Hero Section */
 #hero {
-    text-align: center;
-    padding: 100px 20px;
-    background-color: #333;
-}
-
-#hero h2 {
-    font-size: 48px;
-}
-
-#hero p {
-    font-size: 24px;
-}
-
-.cta {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #1abc9c;
+    background-color: #1c1c1c;
     color: #fff;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+    padding: 100px 0;
 }
 
-.cta:hover {
+#hero .btn-primary {
+    background-color: #1abc9c;
+    border: none;
+}
+
+#hero .btn-primary:hover {
     background-color: #16a085;
 }
 
-/* Section Styles */
-section {
-    padding: 60px 20px;
-}
-
-#projects, #skills, #about {
-    background-color: #222;
-}
-
-.project-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.project-list div {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 4px;
-}
-
-/* Contact Section */
-#contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-#contact input, #contact textarea {
-    padding: 10px;
-    background-color: #444;
+/* Cards for Projects */
+.card {
     border: none;
-    color: #fff;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
-#contact button {
-    padding: 10px;
-    background-color: #1abc9c;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
+/* Skills Section */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-#contact button:hover {
-    background-color: #16a085;
+li {
+    padding: 8px 0;
+    font-size: 1.2em;
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    background-color: #1e1e1e;
-    padding: 20px;
+    background-color: #121212;
+    padding: 20px 0;
 }
