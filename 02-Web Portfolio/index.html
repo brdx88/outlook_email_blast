@@ -12,13 +12,14 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Sticky Navbar -->
     <header>
-        <!-- Bootstrap Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+            <div class="container">
                 <a class="navbar-brand" href="#">Brian Cusuanto</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -26,13 +27,13 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#projects">Projects</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#skills">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contact">Contact</a>
@@ -44,37 +45,46 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="text-center">
+    <section id="hero" class="hero-section text-center">
         <div class="container">
-            <h2 class="display-4">Hi, I’m Brian Cusuanto</h2>
+            <h1 class="display-3">Hi, I’m Brian Cusuanto</h1>
             <p class="lead">Data Analyst | Python Developer | Web Developer</p>
-            <a href="#projects" class="btn btn-primary btn-lg">View My Work</a>
+            <a href="#projects" class="btn btn-outline-primary btn-lg">Explore My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p>I am a passionate data analyst and developer with over 4 years of experience. I specialize in Python, data engineering, and web development...</p>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-5">
+    <section id="projects" class="projects-section py-5 bg-dark text-white">
         <div class="container">
-            <h3>Projects</h3>
+            <h2 class="section-title">My Projects</h2>
             <div class="row">
-                <div class="col-md-4">
-                    <div class="card bg-dark text-white mb-4">
+                <div class="col-md-6">
+                    <div class="project-card card mb-4 bg-transparent border-0">
                         <div class="card-body">
                             <h5 class="card-title">Project 1</h5>
                             <p class="card-text">Description of the project...</p>
+                            <a href="#" class="stretched-link">View Details</a>
                         </div>
                     </div>
                 </div>
-                <!-- Add more projects here -->
+                <!-- More project cards -->
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-5 bg-dark text-white">
+    <section id="skills" class="skills-section py-5">
         <div class="container">
-            <h3>Skills</h3>
-            <ul>
+            <h2 class="section-title">Skills</h2>
+            <ul class="skills-list">
                 <li>Python, Pandas, NumPy</li>
                 <li>SQL, Data Analysis</li>
                 <li>Data Engineering (Spark, Hive)</li>
@@ -83,18 +93,10 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <h3>About Me</h3>
-            <p>I am a data-driven professional with over 4 years of experience in Python development...</p>
-        </div>
-    </section>
-
     <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-dark text-white">
+    <section id="contact" class="contact-section py-5 bg-dark text-white">
         <div class="container">
-            <h3>Contact Me</h3>
+            <h2 class="section-title">Contact Me</h2>
             <form action="contact_form.py" method="POST" class="row g-3">
                 <div class="col-md-6">
                     <input type="text" class="form-control" name="name" placeholder="Your Name" required>
@@ -106,17 +108,25 @@
                     <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
                 </div>
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-outline-primary">Send Message</button>
                 </div>
             </form>
         </div>
     </section>
 
-    <footer class="bg-dark text-center text-white py-3">
-        <p>&copy; 2024 Brian Cusuanto</p>
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Brian Cusuanto | Built with <3</p>
+            <div class="social-links">
+                <a href="#" class="text-white">LinkedIn</a> |
+                <a href="#" class="text-white">GitHub</a>
+            </div>
+        </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
