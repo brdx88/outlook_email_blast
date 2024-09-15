@@ -1,11 +1,12 @@
 /* General styling */
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212;  /* Consistent dark background for all containers */
+    background-color: #222831;  /* Default dark blue background */
     color: #fff;
     overflow-x: hidden;
+    transition: background 0.2s ease-in-out;
 }
 
 /* Main container: flex layout */
@@ -15,15 +16,15 @@ body {
     min-height: 100vh;
 }
 
-/* Fixed Left Sidebar (occupies 45% of screen width) */
+/* Fixed Left Sidebar */
 .fixed-left {
     width: 45vw;  /* Take up 45% of viewport width */
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
-    padding: 20px;
-    background-color: #1b1b1b;
+    padding: 100px;
+    background-color: #31363F;
     z-index: 10;
 }
 
@@ -37,8 +38,9 @@ body {
 }
 
 .fixed-left p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 20px;
+    color: #a9a9a9;
 }
 
 .fixed-left .nav-link {
