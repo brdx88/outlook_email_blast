@@ -3,9 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Brian Cusuanto - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <h1><a href="#">Brian Cusuanto</a></h1>
+            <ul>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Hi, I'm Brian Cusuanto</h2>
+        <p>Data Analyst | Python Developer | Web Developer</p>
+        <a href="#projects" class="cta">View My Work</a>
+    </section>
+
+    <section id="projects">
+        <h3>Projects</h3>
+        <div class="project-list">
+            <!-- Project Cards Will Go Here -->
+        </div>
+    </section>
+
+    <section id="skills">
+        <h3>Skills</h3>
+        <ul>
+            <li>Python, Pandas, NumPy</li>
+            <li>SQL, Data Analysis</li>
+            <li>Data Engineering (Spark, Hive)</li>
+            <li>Web Development (HTML, CSS, JS)</li>
+        </ul>
+    </section>
+
+    <section id="about">
+        <h3>About Me</h3>
+        <p>I am a data-driven professional with over 4 years of experience in Python development...</p>
+    </section>
+
+    <section id="contact">
+        <h3>Contact Me</h3>
+        <form action="contact_form.py" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Brian Cusuanto</p>
+    </footer>
+
+    <script src="script.js"></script> 
 </body>
 </html>
