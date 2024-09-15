@@ -1,48 +1,80 @@
-/* Apply Montserrat font */
+/* Montserrat font applied to the entire page */
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color: #121212;
+    color: #fff;
 }
 
-h1, h2, h3, p, ul, li, a {
-    color: #fff;
+/* Navbar */
+.navbar-dark .navbar-brand {
+    font-size: 1.5em;
+    font-weight: 600;
 }
 
 /* Hero Section */
-#hero {
-    background-color: #1c1c1c;
-    color: #fff;
+.hero-section {
     padding: 100px 0;
+    background-color: #1b1b1b;
 }
 
-#hero .btn-primary {
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-section .btn-outline-primary {
+    border-color: #1abc9c;
+    color: #1abc9c;
+}
+
+.hero-section .btn-outline-primary:hover {
     background-color: #1abc9c;
-    border: none;
+    color: #fff;
 }
 
-#hero .btn-primary:hover {
-    background-color: #16a085;
+/* Section Titles */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
 }
 
-/* Cards for Projects */
-.card {
-    border: none;
+/* Project Cards */
+.project-card {
     border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
-/* Skills Section */
-ul {
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card .card-body {
+    padding: 20px;
+}
+
+/* Skills List */
+.skills-list {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding-left: 0;
+    font-size: 1.2rem;
 }
 
-li {
-    padding: 8px 0;
-    font-size: 1.2em;
+.skills-list li {
+    padding: 10px 0;
 }
 
 /* Footer */
-footer {
-    background-color: #121212;
-    padding: 20px 0;
+.footer {
+    background-color: #0f0f0f;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer .social-links a {
+    margin: 0 10px;
+    font-size: 1.1rem;
 }
