@@ -1,43 +1,62 @@
-/* Montserrat font applied to the entire page */
+/* General styling */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #121212;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;  /* Consistent dark background for all containers */
     color: #fff;
+    overflow-x: hidden;
 }
 
-/* Navbar */
-.navbar-dark .navbar-brand {
-    font-size: 1.5em;
+/* Main container: flex layout */
+.main-container {
+    display: flex;
+    flex-wrap: nowrap;
+    min-height: 100vh;
+}
+
+/* Fixed Left Sidebar (occupies 45% of screen width) */
+.fixed-left {
+    width: 45vw;  /* Take up 45% of viewport width */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    background-color: #1b1b1b;
+    z-index: 10;
+}
+
+.fixed-left .profile-info {
+    text-align: left;
+}
+
+.fixed-left h1 {
+    font-size: 2.5rem;
     font-weight: 600;
 }
 
-/* Hero Section */
-.hero-section {
-    padding: 100px 0;
-    background-color: #1b1b1b;
-}
-
-.hero-section h1 {
-    font-size: 3.5rem;
+.fixed-left p {
+    font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
-.hero-section .btn-outline-primary {
-    border-color: #1abc9c;
+.fixed-left .nav-link {
+    color: #fff;
+    margin: 10px 0;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.fixed-left .nav-link:hover {
     color: #1abc9c;
 }
 
-.hero-section .btn-outline-primary:hover {
-    background-color: #1abc9c;
-    color: #fff;
-}
-
-/* Section Titles */
-.section-title {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    text-align: center;
-    font-weight: 600;
+/* Scrollable Right Content */
+.scrollable-content {
+    margin-left: 45vw; /* Adjust margin based on the sidebar's width */
+    flex-grow: 1;
+    padding: 20px;
 }
 
 /* Project Cards */
@@ -54,27 +73,50 @@ body {
     padding: 20px;
 }
 
-/* Skills List */
-.skills-list {
-    list-style: none;
-    padding-left: 0;
-    font-size: 1.2rem;
+/* Section Titles */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-.skills-list li {
-    padding: 10px 0;
+/* Responsive behavior: Top-Down Layout for Tablets and Mobiles */
+@media (max-width: 992px) {
+    .main-container {
+        flex-direction: column; /* Turn into vertical stack */
+    }
+
+    .fixed-left {
+        position: static;
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    .scrollable-content {
+        margin-left: 0;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
 }
 
-/* Footer */
-.footer {
-    background-color: #0f0f0f;
-}
+@media (max-width: 768px) {
+    .fixed-left h1 {
+        font-size: 2rem;
+    }
 
-.footer p {
-    margin: 0;
-}
+    .fixed-left p {
+        font-size: 1rem;
+    }
 
-.footer .social-links a {
-    margin: 0 10px;
-    font-size: 1.1rem;
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    /* Remove Navbar on Tablet & Mobile */
+    .nav-link {
+        display: none;
+    }
 }
