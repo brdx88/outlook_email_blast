@@ -13,7 +13,8 @@ from email.mime.application import MIMEApplication
 # Your Outlook email credentials
 # outlook_user = "yourmail@outlook.com"
 # outlook_password = "yourpassword"
-
+outlook_user = "brian.ic@outlook.com"
+outlook_password = "jkukqrgaoclmwuyg"
 
 
 # Function to send an email
