@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Brian Cusuanto - Portfolio</title>
-    
+
     <!-- Google Font Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 
@@ -16,114 +16,97 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Sticky Navbar -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="#">Brian Cusuanto</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#projects">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#skills">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+
+    <!-- Main Container -->
+    <div class="main-container d-flex">
+        <!-- Left Side (Fixed) -->
+        <aside class="fixed-left d-flex flex-column justify-content-center align-items-center bg-dark text-white">
+            <div class="profile-info text-left">
+                <h1>Brian Cusuanto</h1>
+                <p>Data Analyst | Python Developer</p>
+                <nav class="nav flex-column">
+                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#projects">Projects</a>
+                    <a class="nav-link" href="#skills">Skills</a>
+                    <a class="nav-link" href="#contact">Contact</a>
+                </nav>
             </div>
-        </nav>
-    </header>
+        </aside>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section text-center">
-        <div class="container">
-            <h1 class="display-3">Hi, I’m Brian Cusuanto</h1>
-            <p class="lead">Data Analyst | Python Developer | Web Developer</p>
-            <a href="#projects" class="btn btn-outline-primary btn-lg">Explore My Work</a>
-        </div>
-    </section>
+        <!-- Right Side (Scrollable) -->
+        <div class="scrollable-content flex-grow-1">
+            
+            <!-- hide hero section -->
+            <!-- Hero Section
+            <section id="hero" class="hero-section text-center">
+                <div class="container">
+                    <h2>Welcome to My Portfolio</h2>
+                    <p>Explore my work and skills.</p>
+                    <a href="#projects" class="btn btn-outline-primary">See My Projects</a>
+                </div>
+            </section> -->
 
-    <!-- About Section -->
-    <section id="about" class="about-section py-5">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <p>I am a passionate data analyst and developer with over 4 years of experience. I specialize in Python, data engineering, and web development...</p>
-        </div>
-    </section>
+            <!-- About Section -->
+            <section id="about" class="about-section py-5">
+                <div class="container">
+                    <h2 class="section-title">About Me</h2>
+                    <p>I am a passionate data analyst and developer with over 4 years of experience. I specialize in Python, data engineering, and web development...</p>
+                </div>
+            </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section py-5 bg-dark text-white">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="project-card card mb-4 bg-transparent border-0">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 1</h5>
-                            <p class="card-text">Description of the project...</p>
-                            <a href="#" class="stretched-link">View Details</a>
+            <!-- Projects Section -->
+            <section id="projects" class="projects-section py-5 bg-dark text-white">
+                <div class="container">
+                    <h2 class="section-title">My Projects</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="project-card card mb-4 bg-transparent border-0">
+                                <div class="card-body">
+                                    <h5 class="card-title">Project 1</h5>
+                                    <p class="card-text">Description of the project...</p>
+                                    <a href="#" class="stretched-link">View Details</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- More project cards -->
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section py-5">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <ul class="skills-list">
-                <li>Python, Pandas, NumPy</li>
-                <li>SQL, Data Analysis</li>
-                <li>Data Engineering (Spark, Hive)</li>
-                <li>Web Development (HTML, CSS, JS)</li>
-            </ul>
-        </div>
-    </section>
+            <!-- Skills Section -->
+            <section id="skills" class="skills-section py-5">
+                <div class="container">
+                    <h2 class="section-title">Skills</h2>
+                    <ul class="skills-list">
+                        <li>Python, Pandas, NumPy</li>
+                        <li>SQL, Data Analysis</li>
+                        <li>Data Engineering (Spark, Hive)</li>
+                        <li>Web Development (HTML, CSS, JS)</li>
+                    </ul>
+                </div>
+            </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section py-5 bg-dark text-white">
-        <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <form action="contact_form.py" method="POST" class="row g-3">
-                <div class="col-md-6">
-                    <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+            <!-- Contact Section -->
+            <section id="contact" class="contact-section py-5 bg-dark text-white">
+                <div class="container">
+                    <h2 class="section-title">Contact Me</h2>
+                    <form action="contact_form.py" method="POST" class="row g-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="col-12">
+                            <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-outline-primary">Send Message</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="col-md-6">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                </div>
-                <div class="col-12">
-                    <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
-                </div>
-                <div class="col-12">
-                    <button type="submit" class="btn btn-outline-primary">Send Message</button>
-                </div>
-            </form>
+            </section>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer bg-dark text-white text-center py-3">
-        <div class="container">
-            <p>&copy; 2024 Brian Cusuanto | Built with <3</p>
-            <div class="social-links">
-                <a href="#" class="text-white">LinkedIn</a> |
-                <a href="#" class="text-white">GitHub</a>
-            </div>
-        </div>
-    </footer>
+    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
