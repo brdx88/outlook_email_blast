@@ -23,7 +23,7 @@ body {
     top: 0;
     bottom: 0;
     left: 0;
-    padding: 100px;
+    padding: 50px;
     background-color: #31363F;
     z-index: 10;
 }
@@ -44,7 +44,7 @@ body {
 }
 
 .fixed-left .nav-link {
-    color: #fff;
+    color: #a9a9a9;
     margin: 10px 0;
     text-decoration: none;
     font-size: 1.1rem;
@@ -75,11 +75,85 @@ body {
     padding: 20px;
 }
 
+/* Styling for the section headers */
+.section-header {
+    position: sticky;
+    top: 0;
+    background-color: #222831;  /* Same as your background color */
+    z-index: 5;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 2px solid #1abc9c;  /* Add a bottom border to make the transition between sections clear */
+}
+
 /* Section Titles */
 .section-title {
     font-size: 2rem;
-    margin-bottom: 30px;
-    text-align: center;
+    /* margin-bottom: 30px;
+    text-align: center; */
+    color: #fff;
+    transition: font-size 0.3s, color 0.3s;  /* Smooth transition effect */
+
+}
+
+/* Shrink the header a bit when sticky */
+.section-header.sticky-active .section-title {
+    font-size: 1.75rem;
+    color: #1abc9c;
+}
+
+/* Base styling for nav links */
+.custom-link {
+    position: relative;
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #ffffff;  /* Text color */
+    text-decoration: none;
+    padding-bottom: 2px;
+    margin-bottom: 15px;
+}
+
+/* Add an underline effect (line behind text) */
+.custom-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #1abc9c;  /* Color of the line */
+    transform: scaleX(0);  /* Start with the line hidden */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+/* Hover effect for link text and the line */
+.custom-link:hover {
+    color: #1abc9c;  /* Highlight the text color */
+}
+
+.custom-link:hover::after {
+    transform: scaleX(1);  /* Animate the line to full width */
+    transform-origin: bottom left;
+}
+
+/* Spacious Footer Icon */
+.footer_icon {
+    font-size: 1.5rem; /* Adjust icon size if needed */
+    margin-right: 15px; /* Add space between icons */
+    color: #fff; /* Keep the text color white */
+}
+
+.footer_icon:last-child {
+    margin-right: 0; /* No margin after the last icon */
+}
+
+
+/* Hide section headers on desktop resolution (above 992px) */
+@media (min-width: 993px) {
+    .section-header {
+        display: none;
+    }
 }
 
 /* Responsive behavior: Top-Down Layout for Tablets and Mobiles */
@@ -100,7 +174,27 @@ body {
     }
 
     .section-title {
+        font-size: 2rem;
+        color: #fff;
+        transition: font-size 0.3s, color 0.3s;
+    }
+
+    .section-header {
+        display: block;
+        position: sticky;
+        top: 0;
+        background-color: #222831;  /* Background to match your design */
+        z-index: 5;
+        padding: 10px 0;
+        text-align: center;
+        border-bottom: 2px solid #1abc9c;
+        transition: all 0.3s ease;
+    }
+
+    /* When header becomes sticky, it changes size/color */
+    .section-header.sticky-active .section-title {
         font-size: 1.75rem;
+        color: #1abc9c;
     }
 }
 
@@ -114,7 +208,27 @@ body {
     }
 
     .section-title {
-        font-size: 1.5rem;
+        font-size: 2rem;
+        color: #fff;
+        transition: font-size 0.3s, color 0.3s;
+    }
+
+    .section-header {
+        display: block;
+        position: sticky;
+        top: 0;
+        background-color: #222831;  /* Background to match your design */
+        z-index: 5;
+        padding: 10px 0;
+        text-align: center;
+        border-bottom: 2px solid #1abc9c;
+        transition: all 0.3s ease;
+    }
+
+    /* When header becomes sticky, it changes size/color */
+    .section-header.sticky-active .section-title {
+        font-size: 1.75rem;
+        color: #1abc9c;
     }
 
     /* Remove Navbar on Tablet & Mobile */

@@ -18,3 +18,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     
 //     document.body.style.background = `radial-gradient(circle at ${gradientX}% ${gradientY}%, rgba(17, 34, 64, 0.3), #0a192f ${lightSize}px)`;
 // });
+
+// JavaScript to add 'sticky-active' class to section headers when they stick
+document.addEventListener("scroll", function() {
+    const sections = document.querySelectorAll('.section-header');
+    
+    sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 0 && rect.bottom >= 0) {
+            section.classList.add('sticky-active');
+        } else {
+            section.classList.remove('sticky-active');
+        }
+    });
+});

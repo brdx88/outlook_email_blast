@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Brian Cusuanto</title>
 
-    <!-- Google Font Montserrat -->
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/969b5d150b.js" crossorigin="anonymous"></script>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -21,30 +24,41 @@
     <div class="main-container d-flex">
         <!-- Left Side (Fixed) -->
         <!-- <aside class="fixed-left d-flex flex-column justify-content-center align-items-center bg-dark text-white"> -->
-        <aside class="fixed-left d-flex flex-column justify-content-center align-items-center text-white">
+        <aside class="fixed-left d-flex flex-column justify-content-left align-items-left text-white">
             <div class="profile-info text-left">
                 <h1>Brian Cusuanto</h1>
-                <p><b>Python Developer | Data Engineer</b></p>
+                <p><b>Python Developer | Data Engineer | Web Developer</b></p>
                 <br>
                 <p>I build automation, pipeline, dashboard, and web application for you.</p>
                 <nav class="nav flex-column">
-                    <a class="nav-link" href="#about">About</a>
-                    <a class="nav-link" href="#projects">Projects</a>
-                    <a class="nav-link" href="#skills">Skills</a>
-                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link custom-link" href="#about">About</a>
+                    <a class="nav-link custom-link" href="#projects">Projects</a>
+                    <a class="nav-link custom-link" href="#skills">Skills</a>
+                    <a class="nav-link custom-link" href="#contact">Contact</a>
                 </nav>
                 <br>
-                <div class="container">
+                <!-- <div class="container">
                     <div class="social-links">
                         <a href="#" class="text-white">LinkedIn</a> |
                         <a href="#" class="text-white">GitHub</a>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <!-- Footer -->
-            <footer class="footer text-white text-center py-3">
-
+            <footer class="footer text-white text-left py-3">
+                <a href="https://www.linkedin.com/in/brianic" target="_blank" class="footer_icon">
+                    <i class="footer_icon fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/brdx88" target="_blank" class="footer_icon">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/brvnt" target="_blank" class="footer_icon">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="mailto:brian.ic@outlook.com" class="footer_icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
             </footer>
         </aside>
 
@@ -63,8 +77,10 @@
 
             <!-- About Section -->
             <section id="about" class="about-section py-5">
-                <div class="container">
+                <div class="section-header">
                     <h2 class="section-title">About</h2>
+                </div>
+                <div class="container">
                     <p>As a dedicated Python Developer with over 4 years of experience in data analytics, I specialize in Python,
                         SQL, and web development using frameworks like Flask. My passion lies in transforming complex data
                         into actionable insights through automation, dynamic dashboards, descriptive and predictive analyses.</p>
@@ -81,10 +97,11 @@
             </section>
 
             <!-- Projects Section -->
-            <!-- <section id="projects" class="projects-section py-5 bg-dark text-white"> -->
-            <section id="projects" class="projects-section py-5 text-white">
-                <div class="container">
+            <section id="projects" class="projects-section py-5">
+                <div class="section-header">
                     <h2 class="section-title">Projects</h2>
+                </div>
+                <div class="container">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="project-card card mb-4 bg-transparent border-0">
@@ -113,10 +130,20 @@
                 </div>
             </section>
 
+            <!-- <section id="projects" class="projects-section py-5 bg-dark text-white"> -->
+            <!-- <section id="projects" class="projects-section py-5 text-white">
+                <div class="container">
+                    <h2 class="section-title">Projects</h2>
+                    
+                </div>
+            </section> -->
+
             <!-- Skills Section -->
             <section id="skills" class="skills-section py-5">
-                <div class="container">
+                <div class="section-header">
                     <h2 class="section-title">Skills</h2>
+                </div>
+                <div class="container">
                     <ul class="skills-list">
                         <li>Python, Pandas, NumPy</li>
                         <li>SQL, Data Analysis</li>
@@ -148,7 +175,6 @@
                 </div>
             </section>
         </div>
-        
     </div>
     
     <!-- Bootstrap JS -->
