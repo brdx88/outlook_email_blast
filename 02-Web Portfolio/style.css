@@ -3,10 +3,31 @@ body {
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #222831;  /* Default dark blue background */
-    color: #fff;
+    background-color: #000c1e;  /* Default dark blue background */
     overflow-x: hidden;
     transition: background 0.2s ease-in-out;
+
+    /* default text color and size */
+    color: rgba(255, 255, 255, 0.7); /* Grey with 70% opacity */
+    font-size: 1em; /* Small size, adjust as needed */
+    line-height: 1.6; /* Makes the text more readable */
+}
+
+/* Heading styles (h1-h5) with solid white color */
+h3, h4, h5 {
+    color: #ffffff; /* Solid white */
+    font-size: 1.5em; /* Adjust size to suit your design */
+}
+
+h2 {
+    font-size: 1.2em; /* Adjust size to suit your design */
+    line-height: 1.6; /* Makes the text more readable */
+}
+
+/* Bold text with solid white */
+strong, b {
+    color: #ffffff; /* Solid white */
+    font-weight: bold;
 }
 
 /* Main container: flex layout */
@@ -24,7 +45,6 @@ body {
     bottom: 0;
     left: 0;
     padding: 50px;
-    background-color: #31363F;
     z-index: 10;
 }
 
@@ -33,21 +53,24 @@ body {
 }
 
 .fixed-left h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 600;
+    line-height: 1.6; /* Makes the text more readable */
 }
 
 .fixed-left p {
     font-size: 1rem;
     margin-bottom: 20px;
-    color: #a9a9a9;
+    color: rgba(255, 255, 255, 0.7); /* Grey with 70% opacity */;
+    line-height: 1.6; /* Makes the text more readable */
 }
 
 .fixed-left .nav-link {
-    color: #a9a9a9;
+    color: rgba(255, 255, 255, 0.7); /* Grey with 70% opacity */
+    line-height: 1.6; /* Makes the text more readable */
     margin: 10px 0;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 0.7em;
 }
 
 .fixed-left .nav-link:hover {
@@ -56,7 +79,7 @@ body {
 
 /* Scrollable Right Content */
 .scrollable-content {
-    margin-left: 45vw; /* Adjust margin based on the sidebar's width */
+    margin-left: 40vw; /* Adjust margin based on the sidebar's width */
     flex-grow: 1;
     padding: 20px;
 }
@@ -74,6 +97,95 @@ body {
 .project-card .card-body {
     padding: 20px;
 }
+
+/* Container for Projects */
+.project-container {
+    /* background-color: #2c2c2c; */
+    padding: 20px;
+    border-radius: 15px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative;
+    margin: 20px 0;
+
+    /* ensure the pseudo-element doesn't overflow beyond the container's border */
+    overflow: hidden;
+}
+
+/* Project Link Styling */
+.project-link {
+    text-decoration: none;
+    color: white;
+    display: block;
+    position: relative;
+}
+
+/* Header (Title) Styling */
+.project-title {
+    margin: 0;
+    font-size: 1.2rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+/* .year-title {
+    font-size: 0.8em;
+} */
+
+/* Description Styling */
+.project-description {
+    margin: 10px 0 0;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Arrow Icon Styling */
+.arrow-icon {
+    display: inline-block;
+    margin-left: 10px;
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect on Project Container */
+.project-container:hover {
+    transform: translateY(-5px); /* Small upward shift */
+    box-shadow: 0 8px 20px rgba(36, 36, 36, 0.3); /* Border-like shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* pseudo-element, takes up the full width and height of the container */
+.project-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); /* Initially transparent */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    z-index: 0; /* Ensure it's below any content inside the container */
+}
+
+/* background becomes a semi-transparent white */
+.project-container:hover::before {
+    background-color: rgba(255, 255, 255, 0.05); /* Semi-transparent white when hovered */
+}
+
+/* Change Header Color on Hover */
+.project-container:hover .project-title {
+    color: #1abc9c; /* Teal color */
+}
+
+/* Show and Animate Arrow Icon */
+.project-container:hover .arrow-icon {
+    opacity: 1;
+    transform: translate(5px, -5px); /* Move diagonally to the top-right */
+}
+
+
+
+
 
 /* Styling for the section headers */
 .section-header {
@@ -137,6 +249,33 @@ body {
     transform-origin: bottom left;
 }
 
+/* Tech Stack Styling */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 10px; /* Space between the tech items */
+    justify-content: left; /* Center the tech items */
+    margin-top: 20px;
+}
+
+.tech-item {
+    padding: 7.5px 10px; /* Space inside each tech stack */
+    border-radius: 20px; /* Rounded rectangle shape */
+    background-color: #122B3C; /* Background color for each tech item */
+    color: #1abc9c; /* Text color */
+    font-size: 0.75rem;
+    font-weight: 500;
+    display: inline-block;
+    white-space: nowrap; /* Prevents the text from breaking into a new line */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* .tech-item:hover {
+    background-color: #1abc9c; 
+    transform: translateY(-3px); 
+} */
+
+
 /* Spacious Footer Icon */
 .footer_icon {
     font-size: 1.5rem; /* Adjust icon size if needed */
@@ -147,7 +286,6 @@ body {
 .footer_icon:last-child {
     margin-right: 0; /* No margin after the last icon */
 }
-
 
 /* Hide section headers on desktop resolution (above 992px) */
 @media (min-width: 993px) {
