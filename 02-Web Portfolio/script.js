@@ -32,3 +32,13 @@ document.addEventListener("scroll", function() {
         }
     });
 });
+
+// Open modal function
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+}
+
+// Close modal function
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+}
