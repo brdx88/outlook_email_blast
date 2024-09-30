@@ -288,57 +288,14 @@ strong, b {
 }
 
 
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 9999; /* Make sure it's on top of all other elements */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0, 0, 0, 0.7); /* Black background with transparency */
-    overflow-y: auto; /* Allow vertical scrolling */
-}
-
-/* Modal Content */
-.modal-content {
-    background-color: #222; /* Dark background for content */
-    margin: 5% auto; /* Center it */
-    padding: 20px;
-    border-radius: 5px;
-    width: 60%;
-    color: white;
-    text-align: center;
-    max-height: 80%; /* Limit the modal height */
-    overflow-y: auto; /* Scrollable content if it exceeds the height */
-}
-
-/* Close Button */
-.close {
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: white;
-}
-
 /* Ensure project containers are clickable */
 .project-container {
     cursor: pointer;
 }
 
-
-
-
+.footer {
+    font-size: 0.7rem;
+}
 
 
 /* Hide section headers on desktop resolution (above 992px) */
