@@ -30,7 +30,7 @@ h2 {
 
 /* Bold text with solid white */
 strong, b {
-    color: #ffffffdd; /* Solid white */
+    color: #ffffffdd;
     /* font-weight: bold; */
 }
 
@@ -311,6 +311,15 @@ strong, b {
 
 /* Responsive behavior: Top-Down Layout for Tablets and Mobiles */
 @media (max-width: 992px) {
+    .nav .flex-column{
+        display: none;
+    }
+
+    .fixed-left .profile-info {
+        margin-left: 10%;
+        margin-top: 10%;
+    }
+
     .main-container {
         flex-direction: column; /* Turn into vertical stack */
     }
@@ -352,6 +361,15 @@ strong, b {
 }
 
 @media (max-width: 768px) {
+    .nav .flex-column{
+        display: none;
+    }
+
+    .fixed-left .profile-info {
+        margin-left: 10%;
+        margin-top: 10%;
+    }
+
     .fixed-left h1 {
         font-size: 2rem;
     }
