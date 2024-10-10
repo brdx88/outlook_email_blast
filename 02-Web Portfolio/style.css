@@ -3,7 +3,7 @@ body {
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000c1e;  /* Default dark blue background */
+    background-color: #00112a;  /* Default dark blue background */
     overflow-x: hidden;
     transition: background 0.2s ease-in-out;
 
@@ -26,8 +26,8 @@ h2 {
 
 /* Bold text with solid white */
 strong, b {
-    color: #ffffff; /* Solid white */
-    font-weight: bold;
+    color: #ffffffdd; /* Solid white */
+    /* font-weight: bold; */
 }
 
 /* Main container: flex layout */
