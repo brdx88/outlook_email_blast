@@ -13,6 +13,10 @@ body {
     line-height: 1.6; /* Makes the text more readable */
 }
 
+.description {
+    margin-right: 30%;
+}
+
 /* Heading styles (h1-h5) with solid white color */
 h3, h4, h5 {
     color: #ffffff; /* Solid white */
