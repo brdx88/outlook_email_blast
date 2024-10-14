@@ -205,8 +205,8 @@ strong, b {
 /* Section Titles */
 .section-title {
     font-size: 2rem;
-    /* margin-bottom: 30px;
-    text-align: center; */
+    margin-left: 5%;
+    text-align: left; 
     color: #fff;
     transition: font-size 0.3s, color 0.3s;  /* Smooth transition effect */
 
