@@ -199,13 +199,15 @@ strong, b {
     z-index: 5;
     padding: 10px 0;
     text-align: center;
-    border-bottom: 2px solid #1abc9c;  /* Add a bottom border to make the transition between sections clear */
+
+    /* Add a bottom border to make the transition between sections clear */
+    /* border-bottom: 2px solid #1abc9c;   */
 }
 
 /* Section Titles */
 .section-title {
-    font-size: 2rem;
-    margin-left: 5%;
+    font-size: 1.2rem;
+    margin-left: 2.5vw;
     text-align: left; 
     color: #fff;
     transition: font-size 0.3s, color 0.3s;  /* Smooth transition effect */
@@ -215,7 +217,7 @@ strong, b {
 /* Shrink the header a bit when sticky */
 .section-header.sticky-active .section-title {
     font-size: 1.75rem;
-    color: #1abc9c;
+    /* color: #1abc9c; */
 }
 
 /* Base styling for nav links */
@@ -336,7 +338,7 @@ strong, b {
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: #fff;
         transition: font-size 0.3s, color 0.3s;
     }
@@ -345,22 +347,28 @@ strong, b {
         display: block;
         position: sticky;
         top: 0;
-        background-color: #222831;  /* Background to match your design */
+        background-color: #00112ada;  /* Background to match your design */
         z-index: 5;
         padding: 10px 0;
         text-align: center;
-        border-bottom: 2px solid #1abc9c;
+        /* border-bottom: 2px solid #1abc9c; */
         transition: all 0.3s ease;
     }
 
     /* When header becomes sticky, it changes size/color */
     .section-header.sticky-active .section-title {
-        font-size: 1.75rem;
-        color: #1abc9c;
+        font-size: 1.8rem;
+        /* color: #1abc9c; */
     }
 }
 
 @media (max-width: 768px) {
+    .project-container {
+        width: 100%; /* Ensures the content spans full width */
+        max-width: 1200px; /* Optional: Set a max width if desired */
+        margin: 0 auto; /* Centers the content */
+        padding: 0 15px; /* Optional padding to give content some space */    
+    }
     .nav .flex-column{
         display: none;
     }
@@ -379,7 +387,7 @@ strong, b {
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.2rem;
         color: #fff;
         transition: font-size 0.3s, color 0.3s;
     }
@@ -388,18 +396,18 @@ strong, b {
         display: block;
         position: sticky;
         top: 0;
-        background-color: #222831;  /* Background to match your design */
+        background-color: #00112ada;  /* Background to match your design */
         z-index: 5;
         padding: 10px 0;
         text-align: center;
-        border-bottom: 2px solid #1abc9c;
+        /* border-bottom: 2px solid #1abc9c; */
         transition: all 0.3s ease;
     }
 
     /* When header becomes sticky, it changes size/color */
     .section-header.sticky-active .section-title {
-        font-size: 1.75rem;
-        color: #1abc9c;
+        font-size: 1.4rem;
+        /* color: #1abc9c; */
     }
 
     /* Remove Navbar on Tablet & Mobile */
