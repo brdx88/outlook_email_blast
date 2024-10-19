@@ -11,6 +11,7 @@ body {
     color: rgba(255, 255, 255, 0.7); /* Grey with 70% opacity */
     font-size: 1em; /* Small size, adjust as needed */
     line-height: 1.6; /* Makes the text more readable */
+    margin-bottom: 1.5em; /* Add spacing between paragraphs */
 }
 
 .description {
@@ -85,7 +86,7 @@ strong, b {
 .scrollable-content {
     margin-left: 40vw; /* Adjust margin based on the sidebar's width */
     flex-grow: 1;
-    padding: 20px;
+    padding: 10px;
 }
 
 /* Project Cards */
@@ -139,7 +140,7 @@ strong, b {
 .project-description {
     margin: 10px 0 0;
     font-size: 1rem;
-    color: #ccc;
+    color: rgba(255, 255, 255, 0.7); /* Grey with 70% opacity */
 }
 
 /* Arrow Icon Styling */
