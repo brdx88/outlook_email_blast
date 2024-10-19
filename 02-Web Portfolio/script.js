@@ -88,4 +88,18 @@ sections.forEach(section => {
     observer.observe(section);
 });
 
+// Add event listener to handle the bottom of the page
+window.addEventListener('scroll', () => {
+    // Check if the user is near the bottom of the page
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        // Highlight the last section (e.g., "Projects")
+        navLinks.forEach(link => link.classList.remove('active'));
+        const lastLink = document.querySelector('.custom-link[href="#projects"]');
+        if (lastLink) {
+            lastLink.classList.add('active');
+        }
+    }
+});
+
+
 
