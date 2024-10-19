@@ -284,15 +284,19 @@ strong, b {
 
 /* Spacious Footer Icon */
 .footer_icon {
-    font-size: 1.5rem; /* Adjust icon size if needed */
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 1.2rem; /* Adjust icon size if needed */
     margin-right: 15px; /* Add space between icons */
-    color: #fff; /* Keep the text color white */
 }
 
 .footer_icon:last-child {
     margin-right: 0; /* No margin after the last icon */
 }
 
+.footer_icon:hover {
+    color: #ffffff;
+}
 
 /* Ensure project containers are clickable */
 .project-container {
