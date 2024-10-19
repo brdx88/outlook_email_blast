@@ -225,7 +225,7 @@ strong, b {
 
 /* Base styling for nav links */
 .custom-link {
-    width: 50%;
+    width: 30%;
     position: relative;
     display: inline-block;
     font-size: 1.2rem;

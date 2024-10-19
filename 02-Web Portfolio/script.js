@@ -43,6 +43,7 @@ document.addEventListener("scroll", function() {
 //     document.getElementById(modalId).style.display = "none";
 // }
 
+// JavaScript to highlight the nav when a section is clicked
 document.querySelectorAll('.custom-link').forEach(link => {
     link.addEventListener('click', function() {
         document.querySelector('.custom-link.active')?.classList.remove('active');
