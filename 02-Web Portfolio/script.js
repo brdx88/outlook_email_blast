@@ -51,28 +51,33 @@ document.querySelectorAll('.custom-link').forEach(link => {
 });
 
 // JavaScript to highlight the nav when a section is in view
-// Select all sections and navigation links
+// Select all sections and the nav links
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.custom-link');
 
-// Set up Intersection Observer
+// Define the options for the Intersection Observer
 const observerOptions = {
-    threshold: 0.6  // 60% of the section must be visible
+    root: null,  // Observe within the viewport
+    threshold: 0.3  // 30% of the section must be visible to trigger the active state
 };
 
+// Create the Intersection Observer
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            const currentSection = entry.target.id;
+            // Get the ID of the section that's currently in view
+            const currentSectionId = entry.target.id;
 
-            // Remove 'active' class from all nav links
+            // Remove the 'active' class from all nav links
             navLinks.forEach(link => {
                 link.classList.remove('active');
             });
 
-            // Add 'active' class to the nav link corresponding to the visible section
-            const activeLink = document.querySelector(`.custom-link[href="#${currentSection}"]`);
-            activeLink.classList.add('active');
+            // Add 'active' class to the corresponding nav link
+            const activeLink = document.querySelector(`.custom-link[href="#${currentSectionId}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
         }
     });
 }, observerOptions);
@@ -81,4 +86,5 @@ const observer = new IntersectionObserver((entries, observer) => {
 sections.forEach(section => {
     observer.observe(section);
 });
+
 
