@@ -239,7 +239,6 @@ strong, b {
 
 /* Hover effect to change background color */
 .custom-link:hover {
-    font-weight: bold;
     color: #ffffff;
     background-color: #122B3C;
 
