@@ -220,50 +220,40 @@ strong, b {
     /* color: #1abc9c; */
 }
 
+/* ======================================= */
+
 /* Base styling for nav links */
 .custom-link {
+    width: 50%;
     position: relative;
     display: inline-block;
     font-size: 1.2rem;
-    color: #ffffff;  /* Text color */
+    color: #ffffff;
     text-decoration: none;
-    padding-bottom: 2px;
-    margin-bottom: 15px;
+    padding: 10px 20px;  /* Add some padding for spacing */
+    /* transition: background-color 0.3s ease; */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 8px;  /* Smooth corner radius */
 }
 
-/* Add an underline effect (line behind text) */
-.custom-link::after {
-    content: "";
-    position: absolute;
-    width: 30%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #1abc9c;  /* Color of the line */
-    transform: scaleX(0);  /* Start with the line hidden */
-    transform-origin: bottom right;
-    transition: transform 0.5s ease-out;
-}
-
-/* Hover effect for link text and the line */
+/* Hover effect to change background color */
 .custom-link:hover {
-    color: #1abc9c;  /* Highlight the text color */
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #122B3C;
+
 }
 
-.custom-link:hover::after {
-    transform: scaleX(1);  /* Animate the line to full width */
-    transform-origin: bottom left;
-}
-
-/* Active state for the clicked link */
+/* Active state with a permanent background color */
 .custom-link.active {
-    color: #1abc9c;  /* Keep the text highlighted */
+    font-weight: bold;
+    background-color: #122B3C;  /* Keep the background color for active link */
+    color: #1abc9c;
+    border-radius: 8px;  /* Smooth corner radius on active link as well */
 }
 
-.custom-link.active::after {
-    transform: scaleX(1);  /* Keep the line visible */
-    transform-origin: bottom left;
-}
+
+/* ======================================= */
 
 /* Tech Stack Styling */
 .tech-stack {
