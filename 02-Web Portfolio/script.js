@@ -33,12 +33,19 @@ document.addEventListener("scroll", function() {
     });
 });
 
-// Open modal function
-function openModal(modalId) {
-    document.getElementById(modalId).style.display = "block";
-}
+// // Open modal function
+// function openModal(modalId) {
+//     document.getElementById(modalId).style.display = "block";
+// }
 
-// Close modal function
-function closeModal(modalId) {
-    document.getElementById(modalId).style.display = "none";
-}
+// // Close modal function
+// function closeModal(modalId) {
+//     document.getElementById(modalId).style.display = "none";
+// }
+
+document.querySelectorAll('.custom-link').forEach(link => {
+    link.addEventListener('click', function() {
+        document.querySelector('.custom-link.active')?.classList.remove('active');
+        this.classList.add('active');
+    });
+});

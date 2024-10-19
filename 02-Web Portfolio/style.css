@@ -235,14 +235,14 @@ strong, b {
 .custom-link::after {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 30%;
     height: 2px;
     bottom: 0;
     left: 0;
     background-color: #1abc9c;  /* Color of the line */
     transform: scaleX(0);  /* Start with the line hidden */
     transform-origin: bottom right;
-    transition: transform 0.3s ease-out;
+    transition: transform 0.5s ease-out;
 }
 
 /* Hover effect for link text and the line */
@@ -252,6 +252,16 @@ strong, b {
 
 .custom-link:hover::after {
     transform: scaleX(1);  /* Animate the line to full width */
+    transform-origin: bottom left;
+}
+
+/* Active state for the clicked link */
+.custom-link.active {
+    color: #1abc9c;  /* Keep the text highlighted */
+}
+
+.custom-link.active::after {
+    transform: scaleX(1);  /* Keep the line visible */
     transform-origin: bottom left;
 }
 
@@ -313,6 +323,13 @@ strong, b {
 
 /* Responsive behavior: Top-Down Layout for Tablets and Mobiles */
 @media (max-width: 992px) {
+    .project-container {
+        width: 100%; /* Ensures the content spans full width */
+        max-width: 1200px; /* Optional: Set a max width if desired */
+        margin: 0 auto; /* Centers the content */
+        padding: 0 15px; /* Optional padding to give content some space */ 
+    }
+
     .nav .flex-column{
         display: none;
     }
