@@ -2,15 +2,10 @@ import openpyxl
 import os
 import win32com.client as win32
 
-def create_excel_file(file_path):
-    # Create a new Excel file
-    wb = openpyxl.Workbook()
-    ws = wb.active
-    ws.title = "Sample Sheet"
-    ws["A1"] = "Hello"
-    ws["B1"] = "World"
-    wb.save(file_path)
-    print(f"Excel file created at {file_path}")
+# Define needs
+file_path = r"D:\OneDrive\Documents\Personals\08-Portfolios\03-excel_password\test_excel_password.xlsx"
+input_file = os.path.abspath(file_path)  # Use absolute path
+password = "securepassword123"
 
 def encrypt_excel_file(input_file, password):
     # Use pywin32 to set a password on the Excel file
@@ -32,16 +27,9 @@ def encrypt_excel_file(input_file, password):
     print(f"Encrypted file saved at {encrypted_file}")
     return encrypted_file
 
-# Define paths
-input_file = os.path.abspath("sample.xlsx")  # Use absolute path
-password = "securepassword123"
-
-# Create Excel file
-create_excel_file(input_file)
-
 # Encrypt the file
 encrypted_file = encrypt_excel_file(input_file, password)
 
-# Clean up the original file (optional)
-if encrypted_file:
-    os.remove(input_file)
+# # Clean up the original file (optional)
+# if encrypted_file:
+#     os.remove(input_file)
