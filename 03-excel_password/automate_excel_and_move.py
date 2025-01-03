@@ -17,6 +17,11 @@ def encrypt_excel_file(input_file, password):
     excel = win32.gencache.EnsureDispatch("Excel.Application")
     excel.Visible = False  # Run Excel in the background
 
+    # Check if the file exists
+    if not os.path.exists(input_file):
+        print(f"Error: The file '{input_file}' does not exist.")
+        return None
+
     workbook = excel.Workbooks.Open(input_file)
     encrypted_file = input_file.replace(".xlsx", "_protected.xlsx")
 
@@ -28,7 +33,7 @@ def encrypt_excel_file(input_file, password):
     return encrypted_file
 
 # Define paths
-input_file = "sample.xlsx"
+input_file = os.path.abspath("sample.xlsx")  # Use absolute path
 password = "securepassword123"
 
 # Create Excel file
@@ -38,4 +43,5 @@ create_excel_file(input_file)
 encrypted_file = encrypt_excel_file(input_file, password)
 
 # Clean up the original file (optional)
-os.remove(input_file)
+if encrypted_file:
+    os.remove(input_file)
