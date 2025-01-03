@@ -3,7 +3,7 @@ body {
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000c1e;  /* Default dark blue background */
+    background-color: #00112a;  /* Default dark blue background */
     overflow-x: hidden;
     transition: background 0.2s ease-in-out;
 
@@ -11,10 +11,15 @@ body {
     color: rgba(255, 255, 255, 0.7); /* Grey with 70% opacity */
     font-size: 1em; /* Small size, adjust as needed */
     line-height: 1.6; /* Makes the text more readable */
+    margin-bottom: 1.5em; /* Add spacing between paragraphs */
+}
+
+.description {
+    margin-right: 30%;
 }
 
 /* Heading styles (h1-h5) with solid white color */
-h3, h4, h5 {
+h3, h4 {
     color: #ffffff; /* Solid white */
     font-size: 1.5em; /* Adjust size to suit your design */
 }
@@ -26,8 +31,8 @@ h2 {
 
 /* Bold text with solid white */
 strong, b {
-    color: #ffffff; /* Solid white */
-    font-weight: bold;
+    color: #ffffffdd;
+    /* font-weight: bold; */
 }
 
 /* Main container: flex layout */
@@ -81,7 +86,7 @@ strong, b {
 .scrollable-content {
     margin-left: 40vw; /* Adjust margin based on the sidebar's width */
     flex-grow: 1;
-    padding: 20px;
+    padding: 10px;
 }
 
 /* Project Cards */
@@ -135,7 +140,7 @@ strong, b {
 .project-description {
     margin: 10px 0 0;
     font-size: 1rem;
-    color: #ccc;
+    color: rgba(255, 255, 255, 0.7); /* Grey with 70% opacity */
 }
 
 /* Arrow Icon Styling */
@@ -195,14 +200,16 @@ strong, b {
     z-index: 5;
     padding: 10px 0;
     text-align: center;
-    border-bottom: 2px solid #1abc9c;  /* Add a bottom border to make the transition between sections clear */
+
+    /* Add a bottom border to make the transition between sections clear */
+    /* border-bottom: 2px solid #1abc9c;   */
 }
 
 /* Section Titles */
 .section-title {
-    font-size: 2rem;
-    /* margin-bottom: 30px;
-    text-align: center; */
+    font-size: 1.2rem;
+    margin-left: 2.5vw;
+    text-align: left; 
     color: #fff;
     transition: font-size 0.3s, color 0.3s;  /* Smooth transition effect */
 
@@ -211,43 +218,42 @@ strong, b {
 /* Shrink the header a bit when sticky */
 .section-header.sticky-active .section-title {
     font-size: 1.75rem;
-    color: #1abc9c;
+    /* color: #1abc9c; */
 }
+
+/* ======================================= */
 
 /* Base styling for nav links */
 .custom-link {
+    width: 30%;
     position: relative;
     display: inline-block;
     font-size: 1.2rem;
-    color: #ffffff;  /* Text color */
+    color: #ffffff;
     text-decoration: none;
-    padding-bottom: 2px;
-    margin-bottom: 15px;
+    padding: 10px 20px;  /* Add some padding for spacing */
+    /* transition: background-color 0.3s ease; */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 8px;  /* Smooth corner radius */
 }
 
-/* Add an underline effect (line behind text) */
-.custom-link::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #1abc9c;  /* Color of the line */
-    transform: scaleX(0);  /* Start with the line hidden */
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-out;
-}
-
-/* Hover effect for link text and the line */
+/* Hover effect to change background color */
 .custom-link:hover {
-    color: #1abc9c;  /* Highlight the text color */
+    color: #ffffff;
+    background-color: #122B3C;
+
 }
 
-.custom-link:hover::after {
-    transform: scaleX(1);  /* Animate the line to full width */
-    transform-origin: bottom left;
+/* Active state with a permanent background color */
+.custom-link.active {
+    font-weight: bold;
+    background-color: #122B3C;  /* Keep the background color for active link */
+    color: #1abc9c;
+    border-radius: 8px;  /* Smooth corner radius on active link as well */
 }
+
+
+/* ======================================= */
 
 /* Tech Stack Styling */
 .tech-stack {
@@ -278,15 +284,19 @@ strong, b {
 
 /* Spacious Footer Icon */
 .footer_icon {
-    font-size: 1.5rem; /* Adjust icon size if needed */
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 1.2rem; /* Adjust icon size if needed */
     margin-right: 15px; /* Add space between icons */
-    color: #fff; /* Keep the text color white */
 }
 
 .footer_icon:last-child {
     margin-right: 0; /* No margin after the last icon */
 }
 
+.footer_icon:hover {
+    color: #ffffff;
+}
 
 /* Ensure project containers are clickable */
 .project-container {
@@ -294,9 +304,9 @@ strong, b {
 }
 
 .footer {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    margin-bottom: 0px;
 }
-
 
 /* Hide section headers on desktop resolution (above 992px) */
 @media (min-width: 993px) {
@@ -307,6 +317,26 @@ strong, b {
 
 /* Responsive behavior: Top-Down Layout for Tablets and Mobiles */
 @media (max-width: 992px) {
+    .project-container {
+        width: 100%; /* Ensures the content spans full width */
+        max-width: 1200px; /* Optional: Set a max width if desired */
+        margin: 0 auto; /* Centers the content */
+        padding: 0 15px; /* Optional padding to give content some space */ 
+    }
+
+    .project-container:hover {
+        transform: translateY(0px); /* Small upward shift */
+    }
+    
+    .nav .flex-column{
+        display: none;
+    }
+
+    .fixed-left .profile-info {
+        /* margin-left: 10%; */
+        margin-top: 10%;
+    }
+
     .main-container {
         flex-direction: column; /* Turn into vertical stack */
     }
@@ -323,7 +353,7 @@ strong, b {
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: #fff;
         transition: font-size 0.3s, color 0.3s;
     }
@@ -332,22 +362,42 @@ strong, b {
         display: block;
         position: sticky;
         top: 0;
-        background-color: #222831;  /* Background to match your design */
+        background-color: #00112ada;  /* Background to match your design */
         z-index: 5;
         padding: 10px 0;
         text-align: center;
-        border-bottom: 2px solid #1abc9c;
+        /* border-bottom: 2px solid #1abc9c; */
         transition: all 0.3s ease;
     }
 
     /* When header becomes sticky, it changes size/color */
     .section-header.sticky-active .section-title {
-        font-size: 1.75rem;
-        color: #1abc9c;
+        font-size: 1.8rem;
+        /* color: #1abc9c; */
     }
 }
 
 @media (max-width: 768px) {
+    .project-container {
+        width: 100%; /* Ensures the content spans full width */
+        max-width: 1200px; /* Optional: Set a max width if desired */
+        margin: 0 auto; /* Centers the content */
+        padding: 0 15px; /* Optional padding to give content some space */    
+    }
+
+    .project-container:hover {
+        transform: translateY(0px); /* Small upward shift */
+    }
+
+    .nav .flex-column{
+        display: none;
+    }
+
+    .fixed-left .profile-info {
+        /* margin-left: 10%; */
+        margin-top: 10%;
+    }
+
     .fixed-left h1 {
         font-size: 2rem;
     }
@@ -357,7 +407,7 @@ strong, b {
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.2rem;
         color: #fff;
         transition: font-size 0.3s, color 0.3s;
     }
@@ -366,18 +416,18 @@ strong, b {
         display: block;
         position: sticky;
         top: 0;
-        background-color: #222831;  /* Background to match your design */
+        background-color: #00112ada;  /* Background to match your design */
         z-index: 5;
         padding: 10px 0;
         text-align: center;
-        border-bottom: 2px solid #1abc9c;
+        /* border-bottom: 2px solid #1abc9c; */
         transition: all 0.3s ease;
     }
 
     /* When header becomes sticky, it changes size/color */
     .section-header.sticky-active .section-title {
-        font-size: 1.75rem;
-        color: #1abc9c;
+        font-size: 1.4rem;
+        /* color: #1abc9c; */
     }
 
     /* Remove Navbar on Tablet & Mobile */
