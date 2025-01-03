@@ -13,11 +13,10 @@ def create_excel_file(file_path):
     print(f"Excel file created at {file_path}")
 
 def encrypt_excel_file(input_file, output_file, password):
-    with open(input_file, 'rb') as f:
-        excel = msoffcrypto.OfficeFile(f)
-        excel.encrypt(password)
-        with open(output_file, 'wb') as encrypted_file:
-            excel.save(encrypted_file)
+    with open(input_file, 'rb') as infile:
+        excel = msoffcrypto.OfficeFile(infile)
+        with open(output_file, 'wb') as outfile:
+            excel.encrypt(outfile, password)
     print(f"Encrypted file saved at {output_file}")
 
 # Define paths
