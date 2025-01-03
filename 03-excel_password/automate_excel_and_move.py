@@ -68,7 +68,7 @@ def upload_to_ftp(local_file, remote_path, ftp_host, ftp_username, ftp_password)
     with open(local_file, 'rb') as file:
         ftp.storbinary(f"STOR {os.path.basename(local_file)}", file)
 
-    print(f"File {local_file} uploaded to {remote_path} on FTP server.")
+    print(f"File '{local_file}' uploaded to '{remote_path}' on FTP server.")
     ftp.quit()
 
 # 03-Send Email with Outlook
@@ -89,7 +89,7 @@ def send_email_with_outlook(recipient, subject, body, attachment_path=None):
 
         # Send the email
         mail.Send()
-        print(f"Email sent successfully to {recipient_email}!")
+        print(f"Email sent successfully to '{recipient_email}'!")
     except Exception as e:
         print(f"Error: {e}")
 
