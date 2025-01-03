@@ -1,4 +1,3 @@
-import openpyxl
 import os
 import win32com.client as win32
 from ftplib import FTP
@@ -33,12 +32,6 @@ def encrypt_excel_file(input_file, password):
     print(f"Encrypted file saved at {encrypted_file}")
     return encrypted_file
 
-# Encrypt the file
-encrypted_file = encrypt_excel_file(input_file, password)
-
-# # Clean up the original file (optional)
-# if encrypted_file:
-#     os.remove(input_file)
 
 def upload_to_ftp(local_file, remote_path, ftp_host, ftp_username, ftp_password):
     # Connect to FTP
@@ -54,6 +47,13 @@ def upload_to_ftp(local_file, remote_path, ftp_host, ftp_username, ftp_password)
 
     print(f"File {local_file} uploaded to {remote_path} on FTP server.")
     ftp.quit()
+
+# Encrypt the file
+encrypted_file = encrypt_excel_file(input_file, password)
+
+# # Clean up the original file (optional)
+# if encrypted_file:
+#     os.remove(input_file)
 
 # Upload the file to FTP if encryption succeeded
 if encrypted_file:
